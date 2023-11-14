@@ -1,0 +1,13 @@
+default: -p pretty -p disabled -p html -p chrome -p develop
+
+disabled: --publish-quiet
+pretty: --format pretty
+html: --format html --out=./report/report.html
+
+firefox: BROWSER=firefox
+chrome: BROWSER=chrome
+headless: BROWSER=headless
+
+develop: ENVIRONMENT=develop 
+production: ENVIRONMENT=production -p disabled 
+homolog: ENVIRONMENT=homolog -p disabled 
