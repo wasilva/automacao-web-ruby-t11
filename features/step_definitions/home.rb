@@ -1,5 +1,6 @@
 Dado('que eu acesse a pagina home da consultoria') do
   home.load
+  sleep 5
 end
 
 Quando('clico no menu sobre') do
