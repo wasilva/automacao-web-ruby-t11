@@ -1,0 +1,27 @@
+#language: pt
+
+Funcionalidade: Menu
+- Narrativa
+- Validar o redirecionado dos botões do menu da pagina Home
+
+Contexto: Acessar a pagina home
+    Dado que eu acesse a pagina home da consultoria
+
+Esquema do Cenario: Validar o redirecionamento dos link do Menu da pagina Home
+    Quando clico no menu <menu_item>
+    | menu_item         |
+    |'Sobre'            |
+    |'Serviços'         |
+    |'Conexões'         |
+    |'Reconhecimento'   |
+    |'Fale Conosco'     |
+
+    Então deverei ser redirecionado para a sessão <sessao>
+
+    Exemplos:
+    | sessao            |
+    |'Sobre'            |
+    |'Serviços'         |
+    |'Conexões'         |
+    |'Reconhecimento'   |
+    |'Fale Conosco'     |

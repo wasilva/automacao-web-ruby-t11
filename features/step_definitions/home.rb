@@ -1,12 +1,11 @@
 Dado('que eu acesse a pagina home da consultoria') do
   home.load
-  sleep 5
 end
 
-Quando('clico no menu sobre') do
+Quando('clico no menu {string}') do |string|
   pending # Write code here that turns the phrase above into concrete actions
 end
 
-Então('deverei ser redirecionado para a sessão sobre') do
+Então('deverei ser redirecionado para a sessão {string}') do |string|
   pending # Write code here that turns the phrase above into concrete actions
 end
