@@ -11,7 +11,7 @@ Esquema do Cenario: Validar o redirecionamento dos link do Menu da pagina Home
     Exemplos:
     | menu_item         | sessao            |
     | 'Sobre'           | 'Sobre nós'       |
-    # | 'Serviços'        | 'Serviços'        |
+    | 'Serviços'        | 'Serviços'        |
     # | 'Conexões'        | 'Conexões'        |
     # | 'Reconhecimento'  | 'Reconhecimento'  |
     # | 'Fale Conosco'    | 'Fale Conosco'    |

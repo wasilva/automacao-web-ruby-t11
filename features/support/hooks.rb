@@ -1,6 +1,7 @@
 Before do |scenario|
 	Capybara.default_max_wait_time = 10
 	page.driver.quit
+
 end
 
 After do |scenario|

@@ -4,10 +4,40 @@ class Home < SitePrism::Page
 
 	set_url '/'
 
-	def click_button(menu_item)
-		sleep 2
-		find(:xpath, '/html/body/header/div/nav/p[1]').click
+	#MENU 
+	element :menu_item_sobre, :xpath, '//p[text()="Sobre"]'
+	element :menu_item_servicos, :xpath, '//p[@class="sc-kbUMEY llGxuN"]'
 
-		sleep 3
+	#VALIDAÇÃO
+	element :titulo_sobre_nos, :xpath, '//p[text()="Sobre nós"]'
+	element :titulo_servicos, :xpath, '//h3[text()="Soluções Personalizadas"]'
+	
+
+	def click_button_menu(menu_item)
+
+		case menu_item
+		when "Sobre"
+			menu_item_sobre.click
+		when "Serviços"
+			menu_item_servicos.click
+		else
+			raise "Elemento não encontrado: #{menu_item}."
+		end
 	end
+
+
+	def validation_menu(sessao)
+		case sessao
+		when "Sobre nós"
+			expect(titulo_sobre_nos).to have_text(sessao)
+		when "Serviços"
+			expect(titulo_servicos).to have_text(sessao)
+		else
+			raise "Elemento não encontrado: #{menu_item}."
+		end
+
+	end
+
+
+
 end
